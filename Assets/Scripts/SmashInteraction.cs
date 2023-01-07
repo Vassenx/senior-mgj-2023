@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SmashInteraction : MonoBehaviour
 {
@@ -24,12 +25,13 @@ public class SmashInteraction : MonoBehaviour
             smashable.SmashObject();
         }
     }
-    
-    private void Update()
+
+    public void OnSmash(InputAction.CallbackContext context)
     {
-        //if (Input.GetKeyDown(KeyCode.F))
-        //{
-        //    animator.SetTrigger("Smash");
-        //}
+        if (context.performed)
+        {
+            animator.SetTrigger("Smash");
+            context.action.Reset();
+        }
     }
 }

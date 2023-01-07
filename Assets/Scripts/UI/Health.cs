@@ -24,6 +24,7 @@ public class Health : MonoBehaviour
         {
             hearts[health-1].SetActive(false);
             health--;
+            GameManager.Instance.Hurt();
         }
 
         if (health <= 0)
