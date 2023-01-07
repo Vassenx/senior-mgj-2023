@@ -66,7 +66,11 @@ public class CharacterController : MonoBehaviour
         //on air
         else if (!isGrounded)
         {
-            rb.velocity = new Vector3(moveInput.x * airSpeed * Time.fixedDeltaTime, rb.velocity.y, moveInput.y * airSpeed * Time.fixedDeltaTime);
+            rb.velocity = new Vector3(targetDir.x * airSpeed * Time.fixedDeltaTime, rb.velocity.y, targetDir.z * airSpeed * Time.fixedDeltaTime);
+        }
+        else if (targetDir.Equals(Vector2.zero))
+        {
+            rb.velocity = Vector3.zero;
         }
         
         animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
