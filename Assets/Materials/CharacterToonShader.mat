@@ -233,11 +233,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 0.252
+    - _1st2nd_Shades_Feather: 0.331
     - _1st_ShadeColor_Feather: 0.112
-    - _1st_ShadeColor_Step: 0.411
-    - _2nd_ShadeColor_Feather: 0.252
-    - _2nd_ShadeColor_Step: 0.655
+    - _1st_ShadeColor_Step: 0.65
+    - _2nd_ShadeColor_Feather: 0.331
+    - _2nd_ShadeColor_Step: 0.6
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ARSampler_AlphaOn: 0
@@ -266,7 +266,7 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.411
+    - _BaseColor_Step: 0.65
     - _BaseShade_Feather: 0.112
     - _Base_Speed: 0
     - _Blend: 0
@@ -398,7 +398,7 @@ Material:
     - _Offset_Z: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _Outline_Width: 30
+    - _Outline_Width: 20
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
@@ -426,7 +426,7 @@ Material:
     - _SecondShadeOverridden: 0
     - _SecondShadeVisible: 1
     - _Set_SystemShadowsToBase: 0
-    - _ShadeColor_Step: 0.655
+    - _ShadeColor_Step: 0.6
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -503,15 +503,15 @@ Material:
     - _utsVersionY: 8
     - _utsVersionZ: 2
     m_Colors:
-    - _1st_ShadeColor: {r: 0.14693838, g: 0.5903711, b: 0.6132076, a: 1}
-    - _2nd_ShadeColor: {r: 0, g: 0, b: 0, a: 1}
+    - _1st_ShadeColor: {r: 0.7921569, g: 0.54585105, b: 0, a: 1}
+    - _2nd_ShadeColor: {r: 0.07450979, g: 0.27341315, b: 0.48235294, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 0.8737629, g: 0.9811321, b: 0.92347085, a: 1}
+    - _BaseColor: {r: 1, g: 0.87895, b: 0.5981132, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.8737629, g: 0.9811321, b: 0.92347085, a: 1}
+    - _Color: {r: 1, g: 0.87895, b: 0.5981132, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
