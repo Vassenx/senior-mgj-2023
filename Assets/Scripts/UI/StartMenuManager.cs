@@ -40,13 +40,15 @@ public class StartMenuManager : MonoBehaviour
     private void OnEnable ()
     {
         //input.SwitchCurrentActionMap("UI");
-        inputModule.cancel.action.performed += Escape;
+        if(isPauseMenu)
+            inputModule.cancel.action.performed += Escape;
     }
 
     private void OnDisable()
     {
         //input.SwitchCurrentActionMap("Player");
-        inputModule.cancel.action.performed -= Escape;
+        if(isPauseMenu)
+            inputModule.cancel.action.performed -= Escape;
     }
 
     public void OnPlayGame()
@@ -55,6 +57,7 @@ public class StartMenuManager : MonoBehaviour
         {
             TogglePause(false);
             pauseMenu.SetActive(false);
+            settingsMenu.SetActive(false);
         }
         else
         {
@@ -91,6 +94,7 @@ public class StartMenuManager : MonoBehaviour
             {
                 TogglePause(!pauseMenu.activeInHierarchy);
                 pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+                settingsMenu.SetActive(false);
             }
         }
     }

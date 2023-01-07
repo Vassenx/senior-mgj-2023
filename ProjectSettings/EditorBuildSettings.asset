@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 5fa31c42c8dc56b46864c94b51e4d884
+  - enabled: 1
+    path: Assets/Scenes/LetterScene.unity
+    guid: 2fa7d88974675fc4c8f34f5817bccccd
   m_configObjects: {}

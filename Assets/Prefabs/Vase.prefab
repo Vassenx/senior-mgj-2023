@@ -47,8 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212ba29c235c8c4281beac6ccdea29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyableObject: {fileID: 3287764308694441023, guid: bba18dc8c8b9c5d4e886a0ff5844a8b2,
+  destroyableObject: {fileID: 1152454935825213223, guid: 13b2e25c50816f24fa3958281cfb1f3d,
     type: 3}
+  destroyableScoreIncrease: 1
 --- !u!65 &331739836512311707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,8 +61,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.5, z: 1}
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!33 &8278346652560219540
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -69,7 +70,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2970950406988432826}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: 2e85d24fe35f120489ba5d988f34981d, type: 3}
 --- !u!23 &8278346652560219539
 MeshRenderer:
   m_ObjectHideFlags: 0

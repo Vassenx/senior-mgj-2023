@@ -6,6 +6,8 @@ using UnityEngine;
 public class GhostSpawner : MonoBehaviour
 {
     [SerializeField] private GhostAIController ghost;
+    [SerializeField] private Transform player;
+    public Vector3 spawnOffset = new Vector3(0,5,0);
     
 #region Singleton
     private static GhostSpawner instance;
@@ -26,7 +28,10 @@ public class GhostSpawner : MonoBehaviour
 
     public void SpawnGhost(Transform spawnTransform)
     {
-        Instantiate(ghost, spawnTransform.position, spawnTransform.rotation);
+        var newGhost = Instantiate(ghost, spawnTransform.position + spawnOffset, spawnTransform.rotation);
+        newGhost.Init(player);
+        StartCoroutine(ghost.Float(newGhost));
+        
         // TODO: ghost and vase don't collide
     }
 }
