@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Smash",
+                    "type": "Button",
+                    "id": "16a3e8c7-b863-4f6a-bc2e-67ad6a631502",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -213,7 +222,7 @@
                 {
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -251,6 +260,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a94e2c80-66eb-47f8-a344-3ba420016984",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Smash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b22253b-2be6-41ad-b4b2-f547ff2f835d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Smash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -346,6 +377,15 @@
                     "type": "PassThrough",
                     "id": "cf8c089a-0f96-4b00-9170-e452be282b62",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "ec408e98-94c9-48df-a49f-349215a83225",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -767,6 +807,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ccc7250-36e8-4310-846b-1a5e4ffb763c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "477d5f01-e6b5-490d-ac00-29334e4fd928",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

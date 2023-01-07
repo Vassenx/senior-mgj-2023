@@ -27,9 +27,9 @@ public class SmashInteraction : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            animator.SetTrigger("Smash");
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    animator.SetTrigger("Smash");
+        //}
     }
 }
