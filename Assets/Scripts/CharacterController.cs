@@ -8,7 +8,9 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
     [SerializeField] private float airSpeed;
+    [SerializeField] private float acceleration;
     [SerializeField] private Vector2 moveInput;
+    [SerializeField] private float playerTurnSpeed;
 
     [Header("Jump Attributes")] 
     [SerializeField] private bool isGrounded;
@@ -22,6 +24,9 @@ public class CharacterController : MonoBehaviour
     private CapsuleCollider playerCollider;
     private bool isMoving;
     private Animator animator;
+    //used to orient player based on camera rotation
+    private Transform camera;
+    [SerializeField] private Vector3 targetDir;
     
     void Awake()
     {
@@ -34,6 +39,7 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
+        camera = Camera.main.transform;
     }
     
     void Update()
@@ -44,13 +50,18 @@ public class CharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
+        TurnPlayer();
     }
 
     void Movement()
     {
+        targetDir = Vector3.zero;
+        targetDir = camera.forward * moveInput.y;
+        targetDir += camera.right * moveInput.x;
         if (isMoving && isGrounded)
         {
-            rb.velocity = new Vector3(moveInput.x * playerSpeed * Time.fixedDeltaTime, rb.velocity.y, moveInput.y * playerSpeed * Time.fixedDeltaTime);
+            rb.velocity = new Vector3(targetDir.x * playerSpeed * Time.fixedDeltaTime, rb.velocity.y, targetDir.z * playerSpeed * Time.fixedDeltaTime);
+
         }
         //on air
         else if (!isGrounded)
@@ -63,8 +74,21 @@ public class CharacterController : MonoBehaviour
 
     void TurnPlayer()
     {
-        
+        Vector3 targetDir = Vector3.zero;
+        targetDir = camera.forward * moveInput.y;
+        targetDir = targetDir + camera.right * moveInput.x;
+        targetDir.y = 0;
+        targetDir.Normalize();
+
+        if (targetDir == Vector3.zero) targetDir = transform.forward;
+
+        //looking towards the target direction
+        Quaternion targetRot = Quaternion.LookRotation(targetDir);
+        //lerps to the rotation target
+        Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRot, playerTurnSpeed * Time.deltaTime);
+        transform.rotation = playerRotation;
     }
+    
 
     void CheckGrounded()
     {
