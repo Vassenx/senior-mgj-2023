@@ -18,21 +18,17 @@ public class Health : MonoBehaviour
         health = hearts.Count;
     }
 
-    public void LoseHealth(int amount)
+    public void LoseHealth()
     {
-        for(int i = 0; i < amount; i++)
+        if (health > 0)
         {
-            hearts[i].SetActive(false);
+            hearts[health-1].SetActive(false);
             health--;
-            if (health <= 0)
-            {
-                health = 0;
-                break;
-            }
         }
 
         if (health <= 0)
         {
+            health = 0;
             GameManager.Instance.Lose();
         }
     }

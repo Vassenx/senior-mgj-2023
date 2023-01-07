@@ -45,13 +45,14 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         score = 0;
+        timeSinceLastHit = Time.time;
     }
 
     public void GhostHitPlayer(Transform player, Vector3 directionHit)
     {
-        if (Time.time - timeSinceLastHit < delayBeforeCanBeHitAgain)
+        if (Time.time - timeSinceLastHit > delayBeforeCanBeHitAgain)
         {
-            health.LoseHealth(1);
+            health.LoseHealth();
             player.GetComponent<Rigidbody>().AddForce(knockbackForce * directionHit, ForceMode.Impulse);
 
             timeSinceLastHit = Time.time;
@@ -71,6 +72,6 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int addedAmount)
     {
         score = addedAmount;
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"{score}";
     }
 }
