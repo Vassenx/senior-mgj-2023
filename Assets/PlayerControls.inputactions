@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DEBUGGER - DELETE USED FOR GHOST SPAWN TESTING",
+                    "type": "Button",
+                    "id": "51fbd46e-dfe4-4353-ab82-47bd309ea02c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -282,6 +291,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Smash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f8d1142-3a05-4dc4-8959-6bd6ec1bd635",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DEBUGGER - DELETE USED FOR GHOST SPAWN TESTING",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

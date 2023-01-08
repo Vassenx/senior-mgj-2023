@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GhostSpawner : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GhostSpawner : MonoBehaviour
     [SerializeField] private Transform player;
     public Vector3 spawnOffset = new Vector3(0,5,0);
     
+    //delete me
+    [SerializeField] private Transform spawner;
 #region Singleton
     private static GhostSpawner instance;
     public static GhostSpawner Instance { get { return instance; } }
@@ -33,5 +36,14 @@ public class GhostSpawner : MonoBehaviour
         StartCoroutine(ghost.Float(newGhost));
         
         // TODO: ghost and vase don't collide
+    }
+    
+    /* Test Event for debugging ghost ai */
+    public void OnSpawn(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            SpawnGhost(spawner);
+        }
     }
 }

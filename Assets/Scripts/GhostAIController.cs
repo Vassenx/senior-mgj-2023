@@ -5,16 +5,18 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Animator))]
 public class GhostAIController : MonoBehaviour
 {
     public NavMeshAgent agent;
     private Transform player;
     
     private bool isFloating = false;
-
+    private Animator ghostAnimator;
     public void Init(Transform playerTransf)
     {
         player = playerTransf;
+        ghostAnimator = GetComponent<Animator>();
     }
     
     private void Update()
@@ -48,6 +50,7 @@ public class GhostAIController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            ghostAnimator.SetTrigger("Attack");
             GameManager.Instance.GhostHitPlayer(player, collision.contacts[0].normal);
         }
     }

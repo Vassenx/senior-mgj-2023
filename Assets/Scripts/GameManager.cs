@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Health health;
     [SerializeField] private Animator playerAnimator;
-        
+
     [SerializeField] private float knockbackForce;
     [SerializeField] private float delayBeforeCanBeHitAgain = 2f;
     private float timeSinceLastHit = 0;
@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     {
         if (Time.time - timeSinceLastHit > delayBeforeCanBeHitAgain)
         {
+            
             health.LoseHealth();
             player.GetComponent<Rigidbody>().AddForce(knockbackForce * directionHit, ForceMode.Impulse);
 
