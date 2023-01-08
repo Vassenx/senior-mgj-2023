@@ -23,7 +23,7 @@ public class CharacterController : MonoBehaviour
     private Rigidbody rb;
     private CapsuleCollider playerCollider;
     private bool isMoving;
-    private Animator animator;
+    [SerializeField] private Animator animator;
     //used to orient player based on camera rotation
     private Transform camera;
     [SerializeField] private Vector3 targetDir;
@@ -38,7 +38,6 @@ public class CharacterController : MonoBehaviour
         //other components here
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
-        animator = GetComponent<Animator>();
         camera = Camera.main.transform;
     }
     
@@ -127,6 +126,15 @@ public class CharacterController : MonoBehaviour
         if (context.performed && isGrounded)
         {
             Jump();
+        }
+    }
+    
+    public void OnSmash(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            animator.SetTrigger("Smash");
+            context.action.Reset();
         }
     }
     

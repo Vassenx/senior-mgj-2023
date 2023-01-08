@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private float timeSinceLastHit = 0;
     
     private int score = 0;
+    private int maxPointsPossible;
     
     private const string endScene = "LetterScene";
     
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         timeSinceLastHit = Time.time;
+        maxPointsPossible = GameObject.FindObjectsOfType<Smashable>().Length;
     }
 
     public void GhostHitPlayer(Transform player, Vector3 directionHit)
@@ -61,11 +63,14 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void Win() // TODO win
+    public void TryWin() // TODO win
     {
-        SceneManager.LoadScene(endScene);
+        if (score >= maxPointsPossible)
+        {
+            SceneManager.LoadScene(endScene);
+        }
     }
-
+    
     public void Hurt()
     {
         playerAnimator.SetTrigger("Hurt");

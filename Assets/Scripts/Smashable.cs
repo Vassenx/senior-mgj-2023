@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Smashable : MonoBehaviour
 {
     [SerializeField] private GameObject destroyableObject;
-    [SerializeField] private int destroyableScoreIncrease = 1;
+    [SerializeField] private TrashPickUp trashInside;
     
     public void SmashObject()
     {
@@ -14,8 +14,6 @@ public class Smashable : MonoBehaviour
         Instantiate(destroyableObject, curTransf.position, curTransf.rotation, curTransf.parent);
         Destroy(gameObject);
 
-        GameManager.Instance.UpdateScore(destroyableScoreIncrease);
-        
         GhostSpawner.Instance.SpawnGhost(curTransf);
     }
     
@@ -24,6 +22,8 @@ public class Smashable : MonoBehaviour
         if (Keyboard.current.fKey.isPressed)
         {
             SmashObject();
+            var trash = Instantiate(trashInside, transform.position, trashInside.transform.rotation);
+            trash.Spawn();
         }
     }
 }
