@@ -64,12 +64,16 @@ public class GhostAIController : MonoBehaviour
         isFloating = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void AttackAnim()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        ghostAnimator.SetTrigger("Attack");
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            ghostAnimator.SetTrigger("Attack");
-            GameManager.Instance.GhostHitPlayer(player, collision.contacts[0].normal);
+            GameManager.Instance.GhostHitPlayer(player, transform.forward, this);
         }
     }
 }
