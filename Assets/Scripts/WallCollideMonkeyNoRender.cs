@@ -5,10 +5,18 @@ using UnityEngine;
 
 public class WallCollideMonkeyNoRender : MonoBehaviour
 {
+    [SerializeField] private Transform cameraTransform;
+    
+    private void Update()
+    {
+        transform.position = cameraTransform.position; // hack: wacky Cinemachine issues
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("wall"))
         {
+
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }

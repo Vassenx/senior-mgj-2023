@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         score = 0;
+        scoreText.text = $"{score}";
         timeSinceLastHit = Time.time;
         maxPointsPossible = GameObject.FindObjectsOfType<Smashable>().Length;
     }
