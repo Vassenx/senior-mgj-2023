@@ -24,6 +24,7 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         RotateCamera();
     }
 
