@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 96711667c0f8340b18ee4442201db0e4
+=======
+guid: 7817e8db86f649a4bb61d866cad4c257
+>>>>>>> 3ff15c2 (Smash audio now on broken artifacts as the normal version is destroyed, also added collect trash audio)
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

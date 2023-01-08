@@ -9,9 +9,6 @@ public class Smashable : MonoBehaviour
     [SerializeField] private GameObject destroyableObject;
     private TrashPickUp trashInside;
     [SerializeField] private List<TrashPickUp> trashPickupOptions;
-    
-    [SerializeField] private AudioSource smashedAudioSource;
-    [SerializeField] private List<AudioClip> smashedClips;
 
     private void Start()
     {
@@ -23,9 +20,6 @@ public class Smashable : MonoBehaviour
         var curTransf = transform;
         Instantiate(destroyableObject, curTransf.position, curTransf.rotation, curTransf.parent);
         Destroy(gameObject);
-
-        smashedAudioSource.clip = smashedClips[UnityEngine.Random.Range(0, smashedClips.Count)];
-        smashedAudioSource.Play();
 
         if (CompareTag("Ghostable"))
         {

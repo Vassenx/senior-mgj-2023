@@ -28,8 +28,10 @@ public class CharacterController : MonoBehaviour
     private Transform camera;
     [SerializeField] private Vector3 targetDir;
 
+    [SerializeField] private AudioSource trashPickUpAudioSource;
     [SerializeField] private AudioSource footStepsSource;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private List<AudioClip> trashPickupNoises;
     [SerializeField] private List<AudioClip> singingNoises;
     [SerializeField] private List<AudioClip> smashNoises;
     [SerializeField] private List<AudioClip> wowNoises;
@@ -163,7 +165,7 @@ public class CharacterController : MonoBehaviour
 
     public void PlayScoreAudios()
     {
-        audioSource.clip = wowNoises[UnityEngine.Random.Range(0, wowNoises.Count)];
-        audioSource.Play();
+        trashPickUpAudioSource.clip = trashPickupNoises[UnityEngine.Random.Range(0, trashPickupNoises.Count)];
+        trashPickUpAudioSource.Play();
     }
 }
