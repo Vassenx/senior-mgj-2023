@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
         score = 0;
-        scoreText.text = $"{score}";
+        scoreText.text = $"{score}/\n  {maxPointsPossible}";
         timeSinceLastHit = Time.time;
         // just in case one disappears, we preset max to lower value
         // maxPointsPossible = GameObject.FindObjectsOfType<Smashable>().Length;
@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
         playerController.TriggerCower();
         playerController.enabled = false;
         playerAnimator.SetTrigger("Cower");
+        backgroundMusicAudioSource.loop = false;
         backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[4];
         backgroundMusicAudioSource.Play();
         yield return new WaitForSeconds(6);
@@ -145,7 +146,14 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int addedAmount)
     {
         score += addedAmount;
-        scoreText.text = $"{score}";
+        scoreText.text = $"{score}/\n  {maxPointsPossible}";
+
+        if(score >= maxPointsPossible)
+        {
+            scoreText.text = $"Get\nOut!";
+
+        }
+
         playerController.PlayScoreAudios();
     }
 
