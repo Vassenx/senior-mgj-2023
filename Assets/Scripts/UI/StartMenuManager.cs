@@ -20,22 +20,22 @@ public class StartMenuManager : MonoBehaviour
     [SerializeField] private bool isPauseMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private bool isLetterScene;
-    
+
     private const string startWorldName = "StartScene";
     private const string mainWorldName = "GameScene";
-    
-    public InputSystemUIInputModule inputModule ;
+
+    public InputSystemUIInputModule inputModule;
     [SerializeField] private PlayerInput input;
-    
-    
+
+
     public void Start()
     {
         //Check if letter scene, if not, call the delegates
         if (!isLetterScene)
         {
-            mainAudioSlider.onValueChanged.AddListener (delegate {MainAudioValueChange ();});
-            musicAudioSlider.onValueChanged.AddListener (delegate {MusicAudioValueChange ();});
-            soundEffectsAudioSlider.onValueChanged.AddListener (delegate {SoundEffectsAudioValueChange ();});   
+            mainAudioSlider.onValueChanged.AddListener(delegate { MainAudioValueChange(); });
+            musicAudioSlider.onValueChanged.AddListener(delegate { MusicAudioValueChange(); });
+            soundEffectsAudioSlider.onValueChanged.AddListener(delegate { SoundEffectsAudioValueChange(); });
         }
     }
 
@@ -43,18 +43,18 @@ public class StartMenuManager : MonoBehaviour
     {
         Time.timeScale = paused ? 0f : 1f;
     }
-    
-    private void OnEnable ()
+
+    private void OnEnable()
     {
         //input.SwitchCurrentActionMap("UI");
-        if(isPauseMenu)
+        if (isPauseMenu)
             inputModule.cancel.action.performed += Escape;
     }
 
     private void OnDisable()
     {
         //input.SwitchCurrentActionMap("Player");
-        if(isPauseMenu)
+        if (isPauseMenu)
             inputModule.cancel.action.performed -= Escape;
     }
 
@@ -86,19 +86,32 @@ public class StartMenuManager : MonoBehaviour
     }
 
     //called for letter scene
-    public void LoadGameLevel( AudioSource s)
+    public void LoadGameLevel(AudioSource s)
     {
         StartCoroutine(WaitForAudioToLoad(s, "GameScene"));
     }
-    
+
     public void LoadStartMenu(AudioSource s)
     {
         StartCoroutine(WaitForAudioToLoad(s, "StartScene"));
     }
 
-    public void OnSettings() => settingsMenu.gameObject.SetActive(true);
+    public void OnSettings()
+    {
+        settingsMenu.gameObject.SetActive(true);
+        pauseMenu.SetActive(false);
+    }
 
-    public void OnBack() => settingsMenu.gameObject.SetActive(false);
+    public void OnBack()
+    {
+        pauseMenu.SetActive(true);
+        settingsMenu.gameObject.SetActive(false);
+    }
+
+    public void BackSettingMenuOnStartMenu()
+    {
+        settingsMenu.gameObject.SetActive(false);
+    }
 
     public void MainAudioValueChange() => audioMixer.SetFloat ("MainVolume", Mathf.Log10(mainAudioSlider.value) * 20);
     public void MusicAudioValueChange() => audioMixer.SetFloat ("MusicVolume", Mathf.Log10(musicAudioSlider.value) * 20);
