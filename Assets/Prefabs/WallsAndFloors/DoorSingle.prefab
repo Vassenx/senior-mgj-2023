@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6151605961328660763}
   - component: {fileID: 9045983819278690385}
   - component: {fileID: 5524914513082223813}
+  - component: {fileID: 8671098183488127829}
   m_Layer: 0
   m_Name: DoorSingleBlock
   m_TagString: wall
@@ -173,6 +174,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8671098183488127829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164001359787033120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2500002, y: 1.125, z: 1.5833334}
+  m_Center: {x: 0.6250001, y: 4.4375, z: -0.00033348807}
 --- !u!1 &3164001361019669948
 GameObject:
   m_ObjectHideFlags: 0

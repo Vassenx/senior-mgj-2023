@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int addedAmount)
     {
-        score = addedAmount;
+        score += addedAmount;
         scoreText.text = $"{score}";
     }
 }

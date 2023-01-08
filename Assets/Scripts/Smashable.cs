@@ -15,6 +15,9 @@ public class Smashable : MonoBehaviour
         Destroy(gameObject);
 
         GhostSpawner.Instance.SpawnGhost(curTransf);
+        
+        var trash = Instantiate(trashInside, transform.position, trashInside.transform.rotation);
+        trash.Spawn();
     }
     
     private void Update()
@@ -22,8 +25,6 @@ public class Smashable : MonoBehaviour
         if (Keyboard.current.fKey.isPressed)
         {
             SmashObject();
-            var trash = Instantiate(trashInside, transform.position, trashInside.transform.rotation);
-            trash.Spawn();
         }
     }
 }

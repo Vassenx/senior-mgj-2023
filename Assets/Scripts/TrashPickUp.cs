@@ -14,12 +14,12 @@ public class TrashPickUp : MonoBehaviour
         rb.AddForce(new Vector3(Random.Range(0.1f,0.5f), 1.5f, Random.Range(0.1f,0.5f)));
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.UpdateScore(1);
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }
