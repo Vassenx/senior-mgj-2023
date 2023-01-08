@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
     private int maxPointsPossible;
     
     private const string endScene = "LetterScene";
+    private bool hasWon = false;
+    public bool HasWon
+    {
+        get { return hasWon;  }
+    }
 
     private int previousGhostCount = 0;
     [SerializeField] private AudioSource backgroundMusicAudioSource;
@@ -101,6 +106,7 @@ public class GameManager : MonoBehaviour
     {
         if (score >= maxPointsPossible)
         {
+            hasWon = true;
             SceneManager.LoadScene(endScene);
         }
     }
