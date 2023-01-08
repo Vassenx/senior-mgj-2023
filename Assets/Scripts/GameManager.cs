@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private float timeSinceLastHit = 0;
     
     private int score = 0;
-    private int maxPointsPossible;
+    [SerializeField] private int maxPointsPossible = 30;
     
     private const string endScene = "LetterScene";
     private bool hasWon = false;
@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour
         score = 0;
         scoreText.text = $"{score}";
         timeSinceLastHit = Time.time;
-        maxPointsPossible = GameObject.FindObjectsOfType<Smashable>().Length;
+        // just in case one disappears, we preset max to lower value
+        // maxPointsPossible = GameObject.FindObjectsOfType<Smashable>().Length;
         
         backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[0];
         backgroundMusicAudioSource.Play();
