@@ -135,4 +135,15 @@ public class GameManager : MonoBehaviour
         scoreText.text = $"{score}";
         playerController.PlayScoreAudios();
     }
+
+    public void Smashed(GameObject obj)
+    {
+        StartCoroutine(RemoveShards(obj));
+    }
+    
+    private IEnumerator RemoveShards(GameObject obj)
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(obj);
+    }
 }

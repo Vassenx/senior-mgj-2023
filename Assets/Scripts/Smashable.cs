@@ -18,7 +18,8 @@ public class Smashable : MonoBehaviour
     public void SmashObject()
     {
         var curTransf = transform;
-        Instantiate(destroyableObject, curTransf.position, curTransf.rotation, curTransf.parent);
+        var newVase = Instantiate(destroyableObject, curTransf.position, curTransf.rotation, curTransf.parent);
+        GameManager.Instance.Smashed(newVase);
         Destroy(gameObject);
 
         if (CompareTag("Ghostable"))
