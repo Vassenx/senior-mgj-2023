@@ -58,7 +58,7 @@ public class StartMenuManager : MonoBehaviour
             inputModule.cancel.action.performed -= Escape;
     }
 
-    public void OnPlayGame()
+    public void OnPlayGame(AudioSource s)
     {
         if (isPauseMenu)
         {
@@ -68,7 +68,7 @@ public class StartMenuManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(mainWorldName);
+            StartCoroutine(WaitForAudioToLoad(s, "GameScene"));
         }
     }
 
@@ -90,7 +90,7 @@ public class StartMenuManager : MonoBehaviour
     {
         StartCoroutine(WaitForAudioToLoad(s, "GameScene"));
     }
-
+    
     public void LoadStartMenu(AudioSource s)
     {
         StartCoroutine(WaitForAudioToLoad(s, "StartScene"));
