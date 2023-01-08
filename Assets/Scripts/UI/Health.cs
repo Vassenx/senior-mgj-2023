@@ -20,10 +20,11 @@ public class Health : MonoBehaviour
 
     public void LoseHealth()
     {
+        health--;
+        hearts[health].SetActive(false);
+
         if (health > 0)
         {
-            hearts[health-1].SetActive(false);
-            health--;
             GameManager.Instance.Hurt();
         }
 
