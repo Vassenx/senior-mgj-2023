@@ -70,7 +70,7 @@ public class CharacterController : MonoBehaviour
         }
         else if (targetDir.Equals(Vector2.zero))
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
         }
         
         animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
