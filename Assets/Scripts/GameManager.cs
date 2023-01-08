@@ -121,7 +121,8 @@ public class GameManager : MonoBehaviour
     {
         if (!playerController.isCowering)
         {
-            playerAnimator.SetTrigger("Hurt");   
+            playerAnimator.SetTrigger("Hurt");
+            playerController.HurtAudio();
         }
     }
 

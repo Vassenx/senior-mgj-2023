@@ -9,14 +9,17 @@ public class Light : MonoBehaviour
     
     [SerializeField] float offsetAmount;
     [SerializeField] float lerpSpeed;
+    private float otheroffset;
 
     private void Start()
     {
-        startPos = transform.position;
+        startPos = gameObject.transform.parent.transform.position;
+        otheroffset = transform.position.y - startPos.y;
     }
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, startPos.y + (offsetAmount * Mathf.Cos(lerpSpeed * Time.time)), transform.position.z);
+        var playerPos = gameObject.transform.parent.transform.position;
+        transform.position = new Vector3(playerPos.x, playerPos.y + otheroffset + (offsetAmount * Mathf.Cos(lerpSpeed * Time.time)), playerPos.z);
     }
 }

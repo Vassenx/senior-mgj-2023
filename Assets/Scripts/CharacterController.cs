@@ -35,6 +35,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private List<AudioClip> singingNoises;
     [SerializeField] private List<AudioClip> smashNoises;
     [SerializeField] private List<AudioClip> wowNoises;
+    [SerializeField] private List<AudioClip> hurtNoises;
     [SerializeField] private float timeBetweenSingingNoises = 10f;
     private float timeSinceLastSinging;
     
@@ -183,5 +184,11 @@ public class CharacterController : MonoBehaviour
     {
         trashPickUpAudioSource.clip = trashPickupNoises[UnityEngine.Random.Range(0, trashPickupNoises.Count)];
         trashPickUpAudioSource.Play();
+    }
+
+    public void HurtAudio()
+    {
+        audioSource.clip = hurtNoises[UnityEngine.Random.Range(0, hurtNoises.Count)];
+        audioSource.Play();
     }
 }
