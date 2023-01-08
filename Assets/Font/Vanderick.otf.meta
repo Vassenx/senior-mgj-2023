@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bfebaf1a5477a465494f10a699f58c90
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vanderick
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3957b7c1b47d84146b02089ec32d554c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

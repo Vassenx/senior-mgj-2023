@@ -3,19 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SmashObject
+  - wall
+  - Ghostable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ghost
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ground
+  - wall
+  - Hitbox
+  - Player
+  - SensorWall
   - 
   - 
   - 
