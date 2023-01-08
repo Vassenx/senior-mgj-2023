@@ -24,6 +24,8 @@ public class StartMenuManager : MonoBehaviour
     private const string startWorldName = "StartScene";
     private const string mainWorldName = "GameScene";
 
+    private const string creditsWorldName = "CreditsScene";
+    
     public InputSystemUIInputModule inputModule;
     [SerializeField] private PlayerInput input;
 
@@ -72,6 +74,8 @@ public class StartMenuManager : MonoBehaviour
         }
     }
 
+    public void OnCredits() => SceneManager.LoadScene(creditsWorldName);
+
     public void OnQuit()
     {
         if (isPauseMenu)
@@ -99,7 +103,8 @@ public class StartMenuManager : MonoBehaviour
     public void OnSettings()
     {
         settingsMenu.gameObject.SetActive(true);
-        pauseMenu.SetActive(false);
+        if(pauseMenu)
+            pauseMenu.SetActive(false);
     }
 
     public void OnBack()
@@ -129,7 +134,6 @@ public class StartMenuManager : MonoBehaviour
             }
         }
     }
-    
     
     /* Coroutine */
     IEnumerator WaitForAudioToLoad(AudioSource s, string scene)
