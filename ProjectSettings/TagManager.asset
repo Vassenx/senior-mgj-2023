@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SmashObject
   - wall
+  - Ghostable
   layers:
   - Default
   - TransparentFX
