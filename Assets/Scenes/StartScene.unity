@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsMenu: {fileID: 429835987}
-  loadingWidget: {fileID: 0}
+  loadingWidget: {fileID: 2104630689}
   mainAudioSlider: {fileID: 1027745813}
   musicAudioSlider: {fileID: 828755023}
   soundEffectsAudioSlider: {fileID: 1312452767}
@@ -1279,7 +1279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 230}
+  m_AnchoredPosition: {x: 0, y: 179}
   m_SizeDelta: {x: 390, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572005326
@@ -1304,8 +1304,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Raccoon Raider and the Temple of Trash
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ca4ab30ec13946dda9b6686ff5a93f8, type: 2}
-  m_sharedMaterial: {fileID: -6480644539428314047, guid: 0ca4ab30ec13946dda9b6686ff5a93f8,
+  m_fontAsset: {fileID: 11400000, guid: 21879360fbd7d446f96d8b49fc6ee4f0, type: 2}
+  m_sharedMaterial: {fileID: -2674099554735028833, guid: 21879360fbd7d446f96d8b49fc6ee4f0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2470,8 +2470,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ca4ab30ec13946dda9b6686ff5a93f8, type: 2}
-  m_sharedMaterial: {fileID: -6480644539428314047, guid: 0ca4ab30ec13946dda9b6686ff5a93f8,
+  m_fontAsset: {fileID: 11400000, guid: 21879360fbd7d446f96d8b49fc6ee4f0, type: 2}
+  m_sharedMaterial: {fileID: -2674099554735028833, guid: 21879360fbd7d446f96d8b49fc6ee4f0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2771,8 +2771,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ca4ab30ec13946dda9b6686ff5a93f8, type: 2}
-  m_sharedMaterial: {fileID: -6480644539428314047, guid: 0ca4ab30ec13946dda9b6686ff5a93f8,
+  m_fontAsset: {fileID: 11400000, guid: 21879360fbd7d446f96d8b49fc6ee4f0, type: 2}
+  m_sharedMaterial: {fileID: -2674099554735028833, guid: 21879360fbd7d446f96d8b49fc6ee4f0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2907,8 +2907,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ca4ab30ec13946dda9b6686ff5a93f8, type: 2}
-  m_sharedMaterial: {fileID: -6480644539428314047, guid: 0ca4ab30ec13946dda9b6686ff5a93f8,
+  m_fontAsset: {fileID: 11400000, guid: 21879360fbd7d446f96d8b49fc6ee4f0, type: 2}
+  m_sharedMaterial: {fileID: -2674099554735028833, guid: 21879360fbd7d446f96d8b49fc6ee4f0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3193,8 +3193,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ca4ab30ec13946dda9b6686ff5a93f8, type: 2}
-  m_sharedMaterial: {fileID: -6480644539428314047, guid: 0ca4ab30ec13946dda9b6686ff5a93f8,
+  m_fontAsset: {fileID: 11400000, guid: 21879360fbd7d446f96d8b49fc6ee4f0, type: 2}
+  m_sharedMaterial: {fileID: -2674099554735028833, guid: 21879360fbd7d446f96d8b49fc6ee4f0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3336,8 +3336,8 @@ MonoBehaviour:
     Left mouse
     click - Smash'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ca4ab30ec13946dda9b6686ff5a93f8, type: 2}
-  m_sharedMaterial: {fileID: -6480644539428314047, guid: 0ca4ab30ec13946dda9b6686ff5a93f8,
+  m_fontAsset: {fileID: 11400000, guid: 21879360fbd7d446f96d8b49fc6ee4f0, type: 2}
+  m_sharedMaterial: {fileID: -2674099554735028833, guid: 21879360fbd7d446f96d8b49fc6ee4f0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
