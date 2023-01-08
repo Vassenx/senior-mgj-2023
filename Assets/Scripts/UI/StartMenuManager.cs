@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class StartMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject settingsMenu;
-
+    [SerializeField] private GameObject loadingWidget;
     [SerializeField] private Slider mainAudioSlider;
     [SerializeField] private Slider musicAudioSlider;
     [SerializeField] private Slider soundEffectsAudioSlider;
@@ -70,6 +70,7 @@ public class StartMenuManager : MonoBehaviour
         }
         else
         {
+            loadingWidget.SetActive(true);
             StartCoroutine(WaitForAudioToLoad(s, "GameScene"));
         }
     }
@@ -128,6 +129,7 @@ public class StartMenuManager : MonoBehaviour
         {
             if (isPauseMenu)
             {
+                Cursor.lockState = pauseMenu.activeInHierarchy ? CursorLockMode.Locked : CursorLockMode.None;
                 TogglePause(!pauseMenu.activeInHierarchy);
                 pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
                 settingsMenu.SetActive(false);

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b2aae0ac37f3a0a4a96e9e2754a995c9
+=======
+guid: 846271dc51890944683d0fbb75417469
+>>>>>>> 8d5d4a6 (Cursor lock bug fix)
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
