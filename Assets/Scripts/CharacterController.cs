@@ -27,23 +27,32 @@ public class CharacterController : MonoBehaviour
     //used to orient player based on camera rotation
     private Transform camera;
     [SerializeField] private Vector3 targetDir;
-    
-    void Awake()
-    {
-        //call scripts here
-    }
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private List<AudioClip> singingNoises;
+    [SerializeField] private List<AudioClip> smashNoises;
+    [SerializeField] private List<AudioClip> wowNoises;
+    [SerializeField] private float timeBetweenSingingNoises = 10f;
+    private float timeSinceLastSinging;
+    
     void Start()
     {
         //other components here
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         camera = Camera.main.transform;
+        timeSinceLastSinging = Time.time;
     }
     
     void Update()
     {
         CheckGrounded();
+        
+        if (Time.time - timeSinceLastSinging > timeBetweenSingingNoises)
+        {
+            audioSource.clip = singingNoises[UnityEngine.Random.Range(0, singingNoises.Count)];
+            audioSource.Play();
+        }
     }
 
     private void FixedUpdate()
@@ -135,6 +144,9 @@ public class CharacterController : MonoBehaviour
         {
             animator.SetTrigger("Smash");
             context.action.Reset();
+            
+            audioSource.clip = smashNoises[UnityEngine.Random.Range(0, smashNoises.Count)];
+            audioSource.Play();
         }
     }
     
@@ -146,6 +158,10 @@ public class CharacterController : MonoBehaviour
             gameObject.transform.position.z);
         Gizmos.DrawSphere(castPos, colliderCheckRad);
     }
-    
-    
+
+    public void PlayScoreAudios()
+    {
+        audioSource.clip = wowNoises[UnityEngine.Random.Range(0, wowNoises.Count)];
+        audioSource.Play();
+    }
 }

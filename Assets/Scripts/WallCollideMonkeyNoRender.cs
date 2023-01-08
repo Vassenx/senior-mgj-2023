@@ -16,8 +16,11 @@ public class WallCollideMonkeyNoRender : MonoBehaviour
     {
         if (other.CompareTag("wall"))
         {
-
-            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            var meshRend = other.gameObject.GetComponent<MeshRenderer>();
+            if (meshRend != null)
+            {
+                meshRend.enabled = false;
+            }
         }
     }
 
@@ -25,7 +28,11 @@ public class WallCollideMonkeyNoRender : MonoBehaviour
     {
         if (other.CompareTag("wall"))
         {
-            other.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            var meshRend = other.gameObject.GetComponent<MeshRenderer>();
+            if (meshRend != null)
+            {
+                meshRend.enabled = true;
+            }
         }
     }
 }

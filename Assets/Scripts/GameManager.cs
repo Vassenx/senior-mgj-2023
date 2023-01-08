@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Health health;
     [SerializeField] private Animator playerAnimator;
-
+    [SerializeField] private CharacterController playerController;
+    
     [SerializeField] private float knockbackForce;
     [SerializeField] private float delayBeforeCanBeHitAgain = 2f;
     private float timeSinceLastHit = 0;
@@ -93,5 +94,6 @@ public class GameManager : MonoBehaviour
     {
         score += addedAmount;
         scoreText.text = $"{score}";
+        playerController.PlayScoreAudios();
     }
 }

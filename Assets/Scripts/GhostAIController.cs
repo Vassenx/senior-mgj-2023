@@ -13,10 +13,22 @@ public class GhostAIController : MonoBehaviour
     
     private bool isFloating = false;
     private Animator ghostAnimator;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private List<AudioClip> spawnClipOptions;
+    [SerializeField] private List<AudioClip> randomNoisesClipOptions;
+
+    [SerializeField] private float timeBetweenNoises = 5f;
+    private float timeSinceLastNoise;
+    
     public void Init(Transform playerTransf)
     {
         player = playerTransf;
         ghostAnimator = GetComponent<Animator>();
+        timeSinceLastNoise = Time.time;
+        
+        audioSource.clip = spawnClipOptions[UnityEngine.Random.Range(0, spawnClipOptions.Count)];
+        audioSource.Play();
     }
     
     private void Update()
@@ -24,6 +36,12 @@ public class GhostAIController : MonoBehaviour
         if (agent.enabled)
         {
             agent.SetDestination(player.position);
+        }
+
+        if (Time.time - timeBetweenNoises > timeBetweenNoises)
+        {
+            audioSource.clip = randomNoisesClipOptions[UnityEngine.Random.Range(0, randomNoisesClipOptions.Count)];
+            audioSource.Play();
         }
     }
     
