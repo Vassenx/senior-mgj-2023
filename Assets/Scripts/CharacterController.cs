@@ -28,6 +28,7 @@ public class CharacterController : MonoBehaviour
     private Transform camera;
     [SerializeField] private Vector3 targetDir;
 
+    [SerializeField] private AudioSource footStepsSource;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<AudioClip> singingNoises;
     [SerializeField] private List<AudioClip> smashNoises;
@@ -128,6 +129,7 @@ public class CharacterController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
         isMoving = moveInput != Vector2.zero;
+        footStepsSource.enabled = isMoving;
     }
 
     public void OnJump(InputAction.CallbackContext context)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -22,6 +23,10 @@ public class GameManager : MonoBehaviour
     private int maxPointsPossible;
     
     private const string endScene = "LetterScene";
+
+    private int previousGhostCount = 0;
+    [SerializeField] private AudioSource backgroundMusicAudioSource;
+    [SerializeField] private List<AudioClip> backgroundMusicLeastIntenseFirst;
     
 #region Singleton
     private static GameManager instance;
@@ -51,6 +56,31 @@ public class GameManager : MonoBehaviour
         scoreText.text = $"{score}";
         timeSinceLastHit = Time.time;
         maxPointsPossible = GameObject.FindObjectsOfType<Smashable>().Length;
+        
+        backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[0];
+        backgroundMusicAudioSource.Play();
+    }
+
+    private void Update()
+    {
+        var ghostCount = GhostSpawner.Instance.ghosts.Count;
+        
+        // im tired
+        if (previousGhostCount < 3 && ghostCount >= 3)
+        {
+            backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[1];
+            backgroundMusicAudioSource.Play();
+        }
+        else if (previousGhostCount < 6 && ghostCount >= 6)
+        {
+            backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[2];
+            backgroundMusicAudioSource.Play();
+        }
+        else if (previousGhostCount < 9 && ghostCount >= 9)
+        {
+            backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[3];
+            backgroundMusicAudioSource.Play();
+        }
     }
 
     public void GhostHitPlayer(Transform player, Vector3 directionHit)
