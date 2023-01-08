@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1093803455303711167}
   - component: {fileID: 2880851507922256117}
   - component: {fileID: 1648155903238202465}
-  - component: {fileID: 1696062241248192636}
+  - component: {fileID: 3878996207043888149}
   m_Layer: 0
   m_Name: FixturePillar
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1696062241248192636
-BoxCollider:
+--- !u!136 &3878996207043888149
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +94,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.91666603, y: 4.833332, z: 0.916667}
+  m_Radius: 0.6
+  m_Height: 4.833332
+  m_Direction: 1
   m_Center: {x: 0.0016670078, y: 2.581666, z: -0.0016665012}
