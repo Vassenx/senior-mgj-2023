@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float knockbackForce;
     [SerializeField] private float delayBeforeCanBeHitAgain = 2f;
     private float timeSinceLastHit = 0;
-    
+    private float ghostCount;
+
     private int score = 0;
     [SerializeField] private int maxPointsPossible = 30;
     
@@ -73,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        var ghostCount = GhostSpawner.Instance.ghosts.Count;
+        ghostCount = GhostSpawner.Instance.ghosts.Count;
         
         // im tired
         if (previousGhostCount < 3 && ghostCount >= 3)
