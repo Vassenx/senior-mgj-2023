@@ -38,6 +38,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float timeBetweenSingingNoises = 10f;
     private float timeSinceLastSinging;
     
+    [SerializeField] private float timeBetweenTalkNoises = 3f;
+    private float timeSinceTalkSinging;
+    
     void Start()
     {
         //other components here
@@ -45,6 +48,7 @@ public class CharacterController : MonoBehaviour
         playerCollider = GetComponent<CapsuleCollider>();
         camera = Camera.main.transform;
         timeSinceLastSinging = Time.time;
+        timeSinceTalkSinging = Time.time;
     }
     
     void Update()
@@ -149,8 +153,11 @@ public class CharacterController : MonoBehaviour
             animator.SetTrigger("Smash");
             context.action.Reset();
             
-            audioSource.clip = smashNoises[UnityEngine.Random.Range(0, smashNoises.Count)];
-            audioSource.Play();
+            if (Time.time - timeSinceTalkSinging > timeBetweenTalkNoises)
+            {
+                audioSource.clip = smashNoises[UnityEngine.Random.Range(0, smashNoises.Count)];
+                audioSource.Play();
+            }
         }
     }
     

@@ -1006,33 +1006,27 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9dfb69b04e6636c46970608782e17f87, type: 3}
   - {fileID: 8300000, guid: 968bae2074db83b46a6bc56915556f95, type: 3}
   smashNoises:
-  - {fileID: 8300000, guid: ec53c155adf6bbe4e9c522a59ac11473, type: 3}
-  - {fileID: 8300000, guid: ba2233e192b06224a81c7ed55f6faef8, type: 3}
-  - {fileID: 8300000, guid: 2e8ffa36be3ee774fbbddae84e93b731, type: 3}
-  - {fileID: 8300000, guid: f9e0c6ea3b0db0d439186c9a0215de1e, type: 3}
-  - {fileID: 8300000, guid: a76b9a5e75f34354884cb47242bd9a50, type: 3}
-  - {fileID: 8300000, guid: 89995b8373e068b45acf4c853fc50d48, type: 3}
-  - {fileID: 8300000, guid: 1d3e9a04b5664134687b1ddf201fadfe, type: 3}
-  - {fileID: 8300000, guid: d641d873c4b7b434dbc833fcabce6423, type: 3}
-  - {fileID: 8300000, guid: 27feaae4df066e2429278e931d45eafc, type: 3}
-  - {fileID: 8300000, guid: e0befea7a48d8f84996d9d1ad653f974, type: 3}
-  - {fileID: 8300000, guid: 9fef430640092ca4a8d987fd4cff1465, type: 3}
-  - {fileID: 8300000, guid: 4568ee511601fda408ca636aa3eae382, type: 3}
-  - {fileID: 8300000, guid: 6a823b9cc91d8974f9ba35bead6414c6, type: 3}
-  - {fileID: 8300000, guid: 287f4a45ffaf8b24aa4b8995995ed2bb, type: 3}
-  - {fileID: 8300000, guid: 9d65fd06a87e010468c4e42d3991b0b5, type: 3}
-  - {fileID: 8300000, guid: 6f2d4b38012347645a108857c32a7d2b, type: 3}
-  - {fileID: 8300000, guid: 0a05241dc93bb6141b852c8b4c675987, type: 3}
-  - {fileID: 8300000, guid: 2a702330885ed23439b7caf228f8269c, type: 3}
-  - {fileID: 8300000, guid: dee7bc2e0f0478d438131d8a4a12539e, type: 3}
-  - {fileID: 8300000, guid: cce63b7565ad0174fa70e6976ff30140, type: 3}
-  - {fileID: 8300000, guid: 670b7506c2955f34880559a4d216bd0c, type: 3}
-  - {fileID: 8300000, guid: a2cf7527289d26448ba2770bfb2d7980, type: 3}
-  - {fileID: 8300000, guid: 6ed8849e97a289b439d71ae49dd25486, type: 3}
-  - {fileID: 8300000, guid: ce27c90b78558534aa175a32a0a9c6aa, type: 3}
-  - {fileID: 8300000, guid: ffe8a5588cc25604baf90f5ed0dbc665, type: 3}
-  - {fileID: 8300000, guid: 351620f95756a5d42a82d9dfc8cf23e8, type: 3}
-  - {fileID: 8300000, guid: 4ffd2163dc024184c9f9afed2411ec6e, type: 3}
+  - {fileID: 8300000, guid: c8b8340fdcb148849852f9523fb02556, type: 3}
+  - {fileID: 8300000, guid: 99025a5a4937b984e9e74fad000acdc9, type: 3}
+  - {fileID: 8300000, guid: b5610665c9e10fe4680a31e80d72ef92, type: 3}
+  - {fileID: 8300000, guid: cbe79a1a24c593348a37d8a2aae200e1, type: 3}
+  - {fileID: 8300000, guid: 8f7751290d648c341b91b3bcc1996ead, type: 3}
+  - {fileID: 8300000, guid: ffd2d07dd701c3f47bdd1d0e47a04f47, type: 3}
+  - {fileID: 8300000, guid: 0a50fc5d480bdbf4dbe784b813454ab6, type: 3}
+  - {fileID: 8300000, guid: 76a05a1947b15de4082989cb2ed31ccb, type: 3}
+  - {fileID: 8300000, guid: 3105fb834eda1cd46ad455a00d424942, type: 3}
+  - {fileID: 8300000, guid: 7f4b43ee34dabfb4489d5863cd22fd9a, type: 3}
+  - {fileID: 8300000, guid: db945b71999930a488d85a97f62aebfd, type: 3}
+  - {fileID: 8300000, guid: b96b16480414aae47aca1003d40c2bf2, type: 3}
+  - {fileID: 8300000, guid: b405131bb63a2604fa0a09f6522fd745, type: 3}
+  - {fileID: 8300000, guid: bc049f2ab552b4848a4d0aa7b1100d61, type: 3}
+  - {fileID: 8300000, guid: c8463e549d6f34a4bb7002de815cc1e9, type: 3}
+  - {fileID: 8300000, guid: 65a9dde2f5a0883488f90e99adb89640, type: 3}
+  - {fileID: 8300000, guid: 793ae3c8d9797264e8696da59e9ae3e5, type: 3}
+  - {fileID: 8300000, guid: a42ccd184ebc14d45bfbc3df2562b554, type: 3}
+  - {fileID: 8300000, guid: 95773dc324f41224886151b127d647aa, type: 3}
+  - {fileID: 8300000, guid: d400dee1488940d47afff591ad87d721, type: 3}
+  - {fileID: 8300000, guid: 6165ed8e9961b4d40a91f722417d5195, type: 3}
   wowNoises:
   - {fileID: 8300000, guid: 495bbd292819a8c428c3f061ce2d0812, type: 3}
   - {fileID: 8300000, guid: 3dd0698bc46f14349864f1c94a39c43b, type: 3}
@@ -1045,6 +1039,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a01e73027da79ef419613dcd3fe53b37, type: 3}
   - {fileID: 8300000, guid: 919801f2ed7de3c4999c6e75824c8008, type: 3}
   timeBetweenSingingNoises: 10
+  timeBetweenTalkNoises: 3
 --- !u!114 &3302106410425564478
 MonoBehaviour:
   m_ObjectHideFlags: 0
