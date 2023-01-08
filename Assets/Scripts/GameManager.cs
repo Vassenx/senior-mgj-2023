@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
     {
         ghostCount = GhostSpawner.Instance.ghosts.Count;
         
+
         // im tired
         if (previousGhostCount < 3 && ghostCount >= 3)
         {
@@ -93,6 +94,7 @@ public class GameManager : MonoBehaviour
             backgroundMusicAudioSource.Play();
         }
 
+        previousGhostCount = (int)ghostCount;
     }
 
     public void GhostHitPlayer(Transform player, Vector3 directionHit, GhostAIController ghost)

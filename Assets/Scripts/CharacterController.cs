@@ -64,6 +64,7 @@ public class CharacterController : MonoBehaviour
         {
             audioSource.clip = singingNoises[UnityEngine.Random.Range(0, singingNoises.Count)];
             audioSource.Play();
+            timeSinceLastSinging = Time.time;
         }
     }
 
@@ -167,6 +168,7 @@ public class CharacterController : MonoBehaviour
             {
                 audioSource.clip = smashNoises[UnityEngine.Random.Range(0, smashNoises.Count)];
                 audioSource.Play();
+                timeSinceTalkSinging = Time.time;
             }
         }
     }
