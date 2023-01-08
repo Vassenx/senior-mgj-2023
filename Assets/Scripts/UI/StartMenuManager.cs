@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
@@ -93,6 +94,8 @@ public class StartMenuManager : MonoBehaviour
     //called for letter scene
     public void LoadGameLevel(AudioSource s)
     {
+        var a = (new GameObject("DestroyOnLoad")).transform;
+        GameManager.Instance.gameObject.transform.SetParent(a); // removes dont destroy on load
         StartCoroutine(WaitForAudioToLoad(s, "GameScene"));
     }
 
