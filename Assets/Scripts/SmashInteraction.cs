@@ -10,7 +10,7 @@ public class SmashInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("SmashObject"))
+        if (!other.CompareTag("SmashObject") || !other.CompareTag("Ghostable"))
             return;
 
         var smashable = other.GetComponent<Smashable>();
