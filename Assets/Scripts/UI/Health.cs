@@ -27,9 +27,10 @@ public class Health : MonoBehaviour
             GameManager.Instance.Hurt();
         }
 
-        if (health <= 0)
+        else if (health <= 0)
         {
             health = 0;
+            GameManager.Instance.isGameOver = true;
             GameManager.Instance.Lose();
         }
     }

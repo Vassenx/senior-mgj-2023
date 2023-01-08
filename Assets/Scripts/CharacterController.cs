@@ -41,9 +41,13 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float timeBetweenTalkNoises = 3f;
     private float timeSinceTalkSinging;
     
+    public bool isCowering;
+    
+    
     void Start()
     {
         //other components here
+        isCowering = false;
         rb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         camera = Camera.main.transform;
@@ -128,6 +132,11 @@ public class CharacterController : MonoBehaviour
     {
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
         animator.SetTrigger("Jump");
+    }
+
+    public void TriggerCower()
+    {
+        isCowering = true;
     }
 
     /* Events */

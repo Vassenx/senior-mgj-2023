@@ -25,9 +25,12 @@ public class GameManager : MonoBehaviour
     private const string endScene = "LetterScene";
     private bool hasWon = false;
     public bool HasWon
+    
     {
         get { return hasWon;  }
     }
+
+    public bool isGameOver;
 
     private int previousGhostCount = 0;
     [SerializeField] private AudioSource backgroundMusicAudioSource;
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        isGameOver = false;
         score = 0;
         scoreText.text = $"{score}";
         timeSinceLastHit = Time.time;
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
             backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[3];
             backgroundMusicAudioSource.Play();
         }
+
     }
 
     public void GhostHitPlayer(Transform player, Vector3 directionHit, GhostAIController ghost)
@@ -114,7 +119,10 @@ public class GameManager : MonoBehaviour
     
     public void Hurt()
     {
-        playerAnimator.SetTrigger("Hurt");
+        if (!playerController.isCowering)
+        {
+            playerAnimator.SetTrigger("Hurt");   
+        }
     }
 
     public void Lose() // TODO die
@@ -124,10 +132,15 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Die()
     {
+        playerController.TriggerCower();
+        playerController.enabled = false;
         playerAnimator.SetTrigger("Cower");
+        backgroundMusicAudioSource.clip = backgroundMusicLeastIntenseFirst[4];
+        backgroundMusicAudioSource.Play();
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene(endScene);
     }
+    
 
     public void UpdateScore(int addedAmount)
     {
