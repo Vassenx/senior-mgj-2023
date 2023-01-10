@@ -98,8 +98,8 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.429216
-  m_Height: 2.7148116
-  m_Direction: 1
+  m_Height: 9
+  m_Direction: 2
   m_Center: {x: -0.015727162, y: -0.25803605, z: 2.4559631}
 --- !u!54 &1291039416031082925
 Rigidbody:
@@ -136,15 +136,6 @@ MonoBehaviour:
   - {fileID: 52365477230813615, guid: 3df2e53d7b1a20e40817c920cc982604, type: 3}
   - {fileID: -945926954723213600, guid: 99e8cd623c48b8642918a30f9f69fe0c, type: 3}
   - {fileID: -674720998213159278, guid: 46c244c6236307e49a70c0bf3ff32f64, type: 3}
-  smashedAudioSource: {fileID: 1451603201876732507}
-  smashedClips:
-  - {fileID: 8300000, guid: 5103ab10b706cc044b660abd28efa530, type: 3}
-  - {fileID: 8300000, guid: c967e75009d3593459b1beb7b23b4764, type: 3}
-  - {fileID: 8300000, guid: f1e0361f6acd8cd4c859a74c223e9599, type: 3}
-  - {fileID: 8300000, guid: 7ba11810500ddfb46a68bdfe31d08159, type: 3}
-  - {fileID: 8300000, guid: 3b2ed4b60569e674b817127e16dfc7b8, type: 3}
-  - {fileID: 8300000, guid: 8a608107d6404b241a58da8890a12868, type: 3}
-  - {fileID: 8300000, guid: 5450b39216339b04d8b94b606e15d750, type: 3}
 --- !u!82 &1451603201876732507
 AudioSource:
   m_ObjectHideFlags: 0

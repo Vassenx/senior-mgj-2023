@@ -101,6 +101,8 @@ public class StartMenuManager : MonoBehaviour
 
     public void LoadStartMenu(AudioSource s)
     {
+        var a = (new GameObject("DestroyOnLoad")).transform;
+        GameManager.Instance.gameObject.transform.SetParent(a); // removes dont destroy on load
         StartCoroutine(WaitForAudioToLoad(s, "StartScene"));
     }
 
