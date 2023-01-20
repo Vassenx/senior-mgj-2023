@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         previousGhostCount = (int)ghostCount;
     }
 
-    public void GhostHitPlayer(Transform player, Vector3 directionHit, GhostAIController ghost)
+    public void GhostHitPlayer(Transform player, Vector3 directionHit)
     {
         if (Time.time - timeSinceLastHit > delayBeforeCanBeHitAgain)
         {
@@ -106,8 +106,6 @@ public class GameManager : MonoBehaviour
             player.GetComponent<Rigidbody>().AddForce(knockbackForce * directionHit, ForceMode.Impulse);
 
             timeSinceLastHit = Time.time;
-
-            ghost.AttackAnim();
         }
     }
     

@@ -68,11 +68,11 @@ public class GhostAIController : MonoBehaviour
         ghostAnimator.SetTrigger("Attack");
     }
     
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // attack radius, hitbox is in GhostHitbox.cs
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.GhostHitPlayer(player, transform.forward, this);
+            AttackAnim();
         }
     }
 }
