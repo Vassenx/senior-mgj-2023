@@ -6,17 +6,15 @@ using UnityEngine;
 public class ExitDoorIndication : MonoBehaviour
 {
     // on the doors you want to show as an exit (usually not this door)
-    [SerializeField] private List<GameObject> exitArrows;
+    [SerializeField] private List<MeshRenderer> exitArrows;
     private float startArrowHeight;
-    private static float floatingSpeed;
-    [SerializeField] private float floatingSpeedNotStatic;
+    [SerializeField] private float floatingSpeed;
+    [SerializeField] private float floatingAmplitude;
     
     private static event Action<ExitDoorIndication> OnEnterRoom; // parameter = door being entered
 
     private void Start()
     {
-        floatingSpeed = floatingSpeedNotStatic; // hack: rip no static in inspector
-        
         OnEnterRoom += RemoveOtherRoomIndicators;
         
        startArrowHeight = transform.position.y;
@@ -24,8 +22,11 @@ public class ExitDoorIndication : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.Instance.NeedToFindExit())
+            return;
+        
         // making the arrow float up and down a bit
-        var newPosY = startArrowHeight + Mathf.Cos(Time.time*floatingSpeed);
+        var newPosY = startArrowHeight + floatingAmplitude * Mathf.Cos(Time.time*floatingSpeed);
         transform.position = new Vector3(transform.position.x,
                                                     newPosY,
                                                     transform.position.z);
@@ -33,6 +34,9 @@ public class ExitDoorIndication : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!GameManager.Instance.NeedToFindExit())
+            return;
+        
         if (other.gameObject.CompareTag("Player"))
         {
             if (OnEnterRoom != null) // clear other indicators
@@ -56,7 +60,7 @@ public class ExitDoorIndication : MonoBehaviour
     {
         foreach(var exitArrow in exitArrows)
         {
-            exitArrow.SetActive(enable);
+            exitArrow.enabled = enable;
         }
     }
 }

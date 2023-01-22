@@ -117,6 +117,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(endScene);
         }
     }
+
+    public bool NeedToFindExit()
+    {
+        return score >= maxPointsPossible;
+    }
     
     public void Hurt()
     {
