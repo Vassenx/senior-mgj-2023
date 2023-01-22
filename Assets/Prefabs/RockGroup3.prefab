@@ -136,6 +136,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -147,6 +157,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 529494239064319485}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &835503379404183724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+    type: 3}
+  m_PrefabInstance: {fileID: 529494239064319485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4607447100377935103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835503379404183724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016798984, y: 0.017073816, z: 0.0051432378}
+  m_Center: {x: 0.0015062506, y: 0.0022533676, z: 0.0011896853}
 --- !u!1001 &684294940931561010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,6 +262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: dirt_plane (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: debfe3b336f9a6d4f9d6867026ad7109,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: debfe3b336f9a6d4f9d6867026ad7109,
         type: 3}
@@ -352,6 +386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_pile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
         type: 3}
@@ -479,6 +518,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
+        type: 3}
       propertyPath: m_TagString
       value: wall
       objectReference: {fileID: 0}
@@ -598,6 +642,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+        type: 3}
       propertyPath: m_TagString
       value: wall
       objectReference: {fileID: 0}
@@ -714,6 +763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_pile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
         type: 3}
@@ -841,6 +895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
         type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -938,6 +997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: dirt_plane (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: debfe3b336f9a6d4f9d6867026ad7109,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: debfe3b336f9a6d4f9d6867026ad7109,
         type: 3}
@@ -1041,6 +1105,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1138,6 +1212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
         type: 3}
@@ -1374,6 +1453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1456,6 +1540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_pile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 763d608a260c3424ab922cc80d35d460,
         type: 3}
@@ -1565,6 +1654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
         type: 3}
@@ -1692,6 +1786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
       propertyPath: m_TagString
       value: wall
       objectReference: {fileID: 0}
@@ -1813,6 +1912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
@@ -1940,6 +2044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2037,6 +2146,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
         type: 3}
@@ -2164,6 +2278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
       propertyPath: m_TagString
       value: wall
       objectReference: {fileID: 0}
@@ -2288,6 +2407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
         type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a3a7f5ee7b5601428aaa0822a44b00b,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2385,6 +2509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24d55181b962b9b45aa859f43994e4f5,
         type: 3}
