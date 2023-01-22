@@ -9,7 +9,9 @@ public class GhostSpawner : MonoBehaviour
     [SerializeField] private GhostAIController ghost;
     [SerializeField] private Transform player;
     public Vector3 spawnOffset = new Vector3(0,5,0);
+    public float spawnDelay = 1f;
     public List<GhostAIController> ghosts;
+    public GameObject spawnParticlePrefab;
     
     //delete me
     [SerializeField] private Transform spawner;
@@ -35,13 +37,30 @@ public class GhostSpawner : MonoBehaviour
         ghosts = new List<GhostAIController>();
     }
 
-    public void SpawnGhost(Transform spawnTransform)
+    public void SpawnGhost(Transform spawnTransform) {
+
+        Vector3 position = spawnTransform.position;
+        Quaternion rotation = spawnTransform.rotation;
+        StartCoroutine(SpawnGhostCR(position, rotation));
+
+    }
+
+    private IEnumerator SpawnGhostCR(Vector3 position, Quaternion rotation)
     {
-        var newGhost = Instantiate(ghost, spawnTransform.position + spawnOffset, spawnTransform.rotation);
+        print("IEnumarting woooo!!!!");
+        // Spawn particles
+        var spawnParticle = Instantiate(spawnParticlePrefab, position, rotation);
+        Destroy(spawnParticle.gameObject, 3f);
+
+        yield return new WaitForSeconds(spawnDelay);
+
+        print("Spawnin ghost!!!");
+
+        var newGhost = Instantiate(ghost, position + spawnOffset, rotation);
         newGhost.Init(player);
         ghosts.Add(newGhost);
         StartCoroutine(ghost.Float(newGhost));
-        
+
         // TODO: ghost and vase don't collide
     }
     
@@ -53,4 +72,6 @@ public class GhostSpawner : MonoBehaviour
             SpawnGhost(spawner);
         }
     }
+
+
 }

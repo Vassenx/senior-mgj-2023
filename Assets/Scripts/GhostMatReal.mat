@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GhostMatReal
-  m_Shader: {fileID: -6465566751694194690, guid: 8e9ade87faee3488d862f229d00372ba,
+  m_Shader: {fileID: -6465566751694194690, guid: f2bf2f4e49f063846991fcabb55f7382,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -126,6 +126,7 @@ Material:
     - _WorkflowMode: 1
     - _YPosSlider: 0.36
     - _ZWrite: 1
+    - _angle: 1.86
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
