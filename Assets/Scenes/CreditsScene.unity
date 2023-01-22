@@ -881,7 +881,6 @@ GameObject:
   m_Component:
   - component: {fileID: 879625453}
   - component: {fileID: 879625452}
-  - component: {fileID: 879625451}
   - component: {fileID: 879625450}
   m_Layer: 0
   m_Name: SceneLoader
@@ -997,21 +996,6 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &879625451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879625448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!114 &879625452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9860bbbd378bd849b065d2088f6ec09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilStartNewScene: 49
+  timeUntilStartNewScene: 45
 --- !u!4 &879625453
 Transform:
   m_ObjectHideFlags: 0
